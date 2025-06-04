@@ -119,8 +119,6 @@ picture {
 @media screen and (min-width: 431px) {
     main {
         display: flex;
-
-        
     }
 
     picture {
@@ -143,6 +141,14 @@ picture {
         justify-content: center;
 
         padding: 2rem 2rem;
+    }
+
+    .perfume-text {
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        margin: 1rem 0;
     }
 }
 
