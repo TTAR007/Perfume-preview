@@ -95,13 +95,13 @@ picture {
     justify-content: center;
     align-items: center;
 
+    color: white;
+    font-weight: 700;
+    line-height: 150%;
+    font-size: clamp(0.6875rem, 0.5536rem + 0.7143vw, 1rem);
+
     img {
         margin-right: 0.5rem;
-    }
-
-    p {
-        color: white;
-        font-weight: 700;
     }
 }
 
