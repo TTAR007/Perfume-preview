@@ -105,6 +105,11 @@ picture {
     }
 }
 
+.button-box:hover {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+}
+
 @media screen and (min-width: 250px) {
     .price-box {
         flex-direction: row;
