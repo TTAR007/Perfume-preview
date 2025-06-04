@@ -3,39 +3,54 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-/*
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    
-    a { color: hsl(228, 45%, 44%); }
-}
-*/
 
 body {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     height: 628px;
     background-color: hsl(30, 38%, 92%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
 }
 
 main {
-    width: 75%;
+    width: 85%;
     background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 h1 {
     font-family: Fraunces;
+    line-height: 100%;
+    font-size: clamp(1.25rem, 0.9286rem + 1.7143vw, 2rem);
 }
 
 p {
     color: hsl(228, 12%, 48%);
-    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    font-size: clamp(0.6875rem, 0.5536rem + 0.7143vw, 1rem);
 }
 
-.product-image {
-    width: 100%;
+.attribution {
+    font-size: 11px;
+
+    position: absolute;
+    bottom: 1rem;
+    
+    a { color: hsl(228, 45%, 44%); }
+}
+
+picture {
+    .product-image {
+        width: 100%;
+    }
 }
 
 .bottom-section {
@@ -43,10 +58,97 @@ p {
 }
 
 .perfume-text {
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
+    margin-bottom: 0.4rem;
 }
 
 .description {
+    margin: 0.7rem 0;
+}
 
+.price-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.4rem;
+}
+
+.discount-price {
+    font-size: clamp(1.25rem, 0.9286rem + 1.7143vw, 2rem);
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    font-family: Fraunces;
+}
+
+.actual-price {
+    text-decoration: line-through;
+}
+
+.button-box {
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    width: 100%;
+    padding: 0.8rem 0;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-right: 0.5rem;
+    }
+
+    p {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 250px) {
+    .price-box {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .actual-price {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 431px) {
+    main {
+        display: flex;
+
+        
+    }
+
+    picture {
+        .product-image {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    picture {
+        flex: 1;
+    }
+
+    .bottom-section {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (min-width: 673px) {
+    main {
+        max-width: 573px;
+        max-height: fit-content;
+    }
 }
